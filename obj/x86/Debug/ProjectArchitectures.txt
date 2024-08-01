@@ -1,0 +1,1 @@
+E:\ComputerProgrammer\C#\Roulette_GUI\Roulette_GUI.csproj;x86

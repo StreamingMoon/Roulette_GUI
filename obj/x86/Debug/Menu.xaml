@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Roulette_GUI.Menu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Roulette_GUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <RelativePanel x:ConnectionId='2' x:Name="Menu_RP" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <RelativePanel x:ConnectionId='3' x:Name="Menu_Title_RP" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <RelativePanel x:ConnectionId='4' x:Name="SP_RP" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0,0,0,0">
+            <Button x:ConnectionId='7' x:Name="SP_B" Width="500" Height="100" FontSize="40" FontFamily="Monocraft Nerd Font" IsEnabled="False">
+                Single Player Mode</Button>
+        </RelativePanel>
+        <RelativePanel x:ConnectionId='5' x:Name="TP_RP" HorizontalAlignment="Center" VerticalAlignment="Center" RelativePanel.Below="SP_RP" Margin="0,50,0,0">
+            <Button x:ConnectionId='6' x:Name="TP_B" Width="500" Height="100" FontSize="40" FontFamily="Monocraft Nerd Font"                      >
+                Two Player Mode</Button>
+        </RelativePanel>
+    </RelativePanel>
+</Page>
+

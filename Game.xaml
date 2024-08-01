@@ -1,0 +1,120 @@
+﻿<Page
+    x:Class="Roulette_GUI.Game"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Roulette_GUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    x:FieldModifier="Public"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <RelativePanel x:Name="Game_RP" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Width="1000" Height="800">
+
+        <RelativePanel x:Name="Player1_RP" 
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       RelativePanel.AlignTopWithPanel="True"
+                       Height="250"
+                       BorderThickness="5" Background="DimGray" BorderBrush="Gray">
+            <TextBlock x:Name="Title_1_TB"  FontFamily="Monocraft Nerd Font" FontSize="50" Margin="10,0,0,0" Foreground="LightGray">Player 1</TextBlock>
+
+            <StackPanel x:Name="Lives_1" Orientation="Horizontal" RelativePanel.RightOf="Title_1_TB" Margin="30,5 ,0,0">
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" RelativePanel.Below="Title_1_TB" Margin="10,10,0,10">
+
+                <ListView x:Name="Prop_1_LV" 
+                          
+                          
+                          Background="Gray" Foreground="DarkGray"
+                          Width="300"
+                          FontFamily="Monocraft Nerd Font">
+                </ListView>
+                
+                <Button x:Name="Prop_1_B" Width="160" Height="150"
+                            FontFamily="Monocraft Nerd Font" FontSize="50"
+                            Margin="10,0,0,0"
+                            Click="Prop_1">
+                    Prop
+                </Button>
+                <Rectangle x:Name="Wall_1" Fill="LightGray" Width="5" Height="160" RadiusX="3" RadiusY="3" Margin="10,0,0,0"/>
+                
+                <muxc:RadioButtons x:Name="Target_1_RB" Width="300" Margin="10,0,0,0">
+                    <TextBlock FontFamily="Monocraft Nerd Font" FontSize="50">Player 1</TextBlock>
+                    <TextBlock FontFamily="Monocraft Nerd Font" FontSize="50">Player 2</TextBlock>
+                </muxc:RadioButtons>
+
+                <Button x:Name="Shoot_1_B" Width="160" Height="150"
+                            FontFamily="Monocraft Nerd Font" FontSize="44"
+                            Margin="10,0,0,0"
+                            Click="Shoot_1">
+                    Shoot
+                </Button>
+
+            </StackPanel>
+        </RelativePanel>
+
+        <RelativePanel x:Name="Table_RP" 
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       RelativePanel.Below="Player1_RP"
+                       RelativePanel.Above="Player2_RP"
+                       >
+            <StackPanel x:Name="Bullets" Orientation="Horizontal" Margin="0,10,0,0" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                        RelativePanel.AlignBottomWithPanel="True"
+                        RelativePanel.AlignTopWithPanel="True"
+                        RelativePanel.AlignLeftWithPanel="True"
+                        RelativePanel.AlignRightWithPanel="True">
+
+
+            </StackPanel>
+        </RelativePanel>
+        
+        <RelativePanel x:Name="Player2_RP" 
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       RelativePanel.AlignBottomWithPanel="True"
+                       Height="250"
+                       BorderThickness="5" Background="DimGray" BorderBrush="Gray">
+
+            <TextBlock x:Name="Title_2_TB"  FontFamily="Monocraft Nerd Font" FontSize="50" Margin="10,0,0,0" Foreground="LightGray">Player 2</TextBlock>
+
+            <StackPanel x:Name="Lives_2" Orientation="Horizontal" RelativePanel.RightOf="Title_2_TB" Margin="30,5,0,0">
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" RelativePanel.Below="Title_2_TB" Margin="10,10,0,10">
+
+                <ListView x:Name="Prop_2_LV" 
+              Background="Gray" Foreground="DarkGray"
+              Width="300"
+              FontFamily="Monocraft Nerd Font">
+                </ListView>
+
+                <Button x:Name="Prop_2_B" Width="160" Height="150"
+                FontFamily="Monocraft Nerd Font" FontSize="50"
+                Margin="10,0,0,0"
+                  Click="Prop_2"      >
+                    Prop
+                </Button>
+                <Rectangle x:Name="Wall_2" Fill="LightGray" Width="5" Height="160" RadiusX="3" RadiusY="3" Margin="10,0,0,0"/>
+
+                <muxc:RadioButtons x:Name="Target_2_RB" Width="300" Margin="10,0,0,0">
+                    <TextBlock FontFamily="Monocraft Nerd Font" FontSize="50">Player 1</TextBlock>
+                    <TextBlock FontFamily="Monocraft Nerd Font" FontSize="50">Player 2</TextBlock>
+                </muxc:RadioButtons>
+
+                <Button x:Name="Shoot_2_B" Width="160" Height="150"
+                FontFamily="Monocraft Nerd Font" FontSize="44"
+                Margin="10,0,0,0"
+                        Click="Shoot_2">
+                    Shoot
+                </Button>
+
+            </StackPanel>
+
+
+        </RelativePanel>
+    </RelativePanel>
+</Page>
